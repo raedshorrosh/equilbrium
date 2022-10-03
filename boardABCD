@@ -21,11 +21,13 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       }
     },
     y: {
-      name: 'ריכוז מולרי'+'&nbsp;&nbsp;&nbsp;&nbsp;',
+      name: 'ריכוז מולרי',
  withLabel: true,
 label: {
         position: 'rt',
-        offset: [-30, -10]
+        offset: [-30, -10],
+	display: 'internal'
+	
       },
       ticks: {
         label: {
@@ -41,6 +43,8 @@ label: {
       }
     }
   } });
+var txt = board.defaultAxes.y.label.content;
+console.log(txt);
 
 board.highlightInfobox = function(x, y , el) {
 		this.infobox.setText('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+y + 'M' );
@@ -56,7 +60,6 @@ board.setBoundingBox([-0.5,1.2*mmax,4.5,xmin]);
 board.fullUpdate();
 
 
-console.log(board);
 p1.push(board.create('point',[0,x1[0]],{strokeColor:col,fillColor:col,name:'[A]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
 p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3,x1[1]],{visible:false})); 
