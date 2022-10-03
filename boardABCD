@@ -43,7 +43,7 @@ label: {
       }
     }
   } });
-var txt = board.defaultAxes.y.label.plaintext;
+var txt = board.defaultAxes.y.label;
 console.log(txt);
 
 board.highlightInfobox = function(x, y , el) {
