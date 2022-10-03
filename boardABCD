@@ -21,7 +21,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       }
     },
     y: {
-      name: 'ריכוז מולרי    ',
+      name: 'ריכוז מולרי'+'&nbsp;&nbsp;&nbsp;&nbsp;',
  withLabel: true,
 label: {
         position: 'rt',
