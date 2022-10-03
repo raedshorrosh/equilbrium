@@ -44,6 +44,9 @@ label: {
     }
   } });
 var txt = board.defaultAxes.y.label;
+txt.display='internal';
+txt.rotate=90;
+board.update();
 console.log(txt);
 
 board.highlightInfobox = function(x, y , el) {
