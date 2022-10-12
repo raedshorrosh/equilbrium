@@ -7,7 +7,9 @@ JXG.Options.axis.highlight = false;
 
 var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
     x: {
-      name: 'x',
+      name: 'זמן',
+      withLabel: true,
+      
       ticks: {
         label: {
           visible: false,
