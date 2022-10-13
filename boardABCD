@@ -11,7 +11,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       withLabel: true,
       label: {
         position: 'lt',
-        offset: [0,0],
+        offset: [130,0],
 	display: 'internal'
 	
       },
