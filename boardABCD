@@ -9,7 +9,12 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
     x: {
       name: 'זמן',
       withLabel: true,
-     
+      label: {
+        position: 'lt',
+      
+	display: 'internal'
+	
+      },
       ticks: {
         label: {
           visible: false,
