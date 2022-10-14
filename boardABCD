@@ -4,7 +4,7 @@ JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
 //JXG.Options.axis.ticks.needsRegularUpdate:true;
 
-var board = JXG.JSXGraph.initBoard('jxgbox', { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
+var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
     x: {
       name: 'זמן',
       withLabel: true,
