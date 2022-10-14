@@ -4,8 +4,7 @@ JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
 //JXG.Options.axis.ticks.needsRegularUpdate:true;
 
-
-var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
+var board = JXG.JSXGraph.initBoard('jxgbox', { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
     x: {
       name: 'זמן',
       withLabel: true,
@@ -31,7 +30,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
 label: {
 	position: 'rt',
         rotate:90,
-        offset: [-20, -10],
+        offset: [-30, -50],
         display: 'internal',
       },
       ticks: {
@@ -48,11 +47,7 @@ label: {
       }
     }
   } });
-var txt = board.defaultAxes.y.label;
-txt.display='internal';
-txt.rotate=90;
-board.update();
-console.log(txt);
+
 
 board.highlightInfobox = function(x, y , el) {
 		this.infobox.setText('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+y + 'M' );
