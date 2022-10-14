@@ -10,9 +10,9 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       name: 'זמן',
       withLabel: true,
       label: {
-      position:'lrt',
-	anchorx:'right',
-      	display: 'internal'
+        	position: 'rt',
+          	offset: [-10, -15]
+        }
 	
       },
       ticks: {
@@ -29,11 +29,12 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
     },
     y: {
       name: 'ריכוז מולרי',
- withLabel: true,
+      withLabel: true,
 label: {
-        anchorY: 'top',
-	display: 'internal',
-	rotate: 90
+	position: 'rt',
+        rotate:90,
+        offset: [-20, -10],
+        display: 'internal',
       },
       ticks: {
         label: {
