@@ -32,6 +32,8 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
  withLabel: true,
 label: {
         position: 'ulft',
+	anchorX: 'left',
+        anchorY: 'top',
 	display: 'internal',
 	rotate: 90
       },
