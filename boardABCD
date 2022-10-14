@@ -31,7 +31,6 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       name: 'ריכוז מולרי',
  withLabel: true,
 label: {
-        position: 'ulft',
         anchorY: 'top',
 	display: 'internal',
 	rotate: 90
