@@ -33,8 +33,8 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
 label: {
         position: 'rt',
         offset: [-30, -10],
-	display: 'internal'
-	
+	display: 'internal',
+	rotate: 90
       },
       ticks: {
         label: {
