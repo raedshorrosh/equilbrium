@@ -10,8 +10,8 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       name: 'זמן',
       withLabel: true,
       label: {
-        position: 'lrt',
 	anchorx:'right',
+	anchory:'bottom',
 	offset: [-10, 20],
       	display: 'internal'
 	
