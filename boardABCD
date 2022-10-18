@@ -67,26 +67,25 @@ p1.push(board.create('point',[0,x1[0]],{strokeColor:col,fillColor:col,name:'[A]'
 p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3.5,x1[1]],{visible:false})); 
-p1.push(board.create('point',[4,x1[1]],{visible:true,name:'',fixed:true})); 
-
+p1.push(board.create('point',[4,x1[1]],{strokeColor:col,fillColor:col,name:'[A]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 p2.push(board.create('point',[0,x2[0]],{strokeColor:col,fillColor:col,name:'[B]', label:{color:'blue',autoPosition: true, offset:[10, 10]},fixed:true})); 
 p2.push(board.create('point',[0.5,x2[1]],{visible:false})); 
 p2.push(board.create('point',[3,x2[1]],{visible:false})); 
 p2.push(board.create('point',[3.5,x2[1]],{visible:false})); 
-p2.push(board.create('point',[4,x2[1]],{visible:true,name:'',fixed:true })); 
+p2.push(board.create('point',[4,x2[1]],{strokeColor:col,fillColor:col,name:'[B]', label:{color:'blue',autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 p3.push(board.create('point',[0,x3[0]],{strokeColor:col,fillColor:col,name:'[C]', label:{color:'orange',autoPosition: true, offset:[10,10]},fixed:true})); 
 p3.push(board.create('point',[0.5,x3[1]],{visible:false})); 
 p3.push(board.create('point',[3,x3[1]],{visible:false})); 
 p3.push(board.create('point',[3.5,x3[1]],{visible:false})); 
-p3.push(board.create('point',[4,x3[1]],{visible:true,name:'',fixed:true})); 
+p3.push(board.create('point',[4,x3[1]],{strokeColor:col,fillColor:col,name:'[C]', label:{color:'orange',autoPosition: true, offset:[10,10]},fixed:true})); 
 
 p4.push(board.create('point',[0,x4[0]],{strokeColor:col,fillColor:col,name:'[D]', label:{color:'magenta',autoPosition: true, offset:[10,10]},fixed:true})); 
 p4.push(board.create('point',[0.5,x4[1]],{visible:false})); 
 p4.push(board.create('point',[3,x4[1]],{visible:false})); 
 p4.push(board.create('point',[3.5,x4[1]],{visible:false})); 
-p4.push(board.create('point',[4,x4[1]],{visible:true,name:'',fixed:true})); 
+p4.push(board.create('point',[4,x4[1]],{strokeColor:col,fillColor:col,name:'[D]', label:{color:'magenta',autoPosition: true, offset:[10,10]},fixed:true})); 
 							
 
 
