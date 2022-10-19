@@ -65,11 +65,11 @@ board.setBoundingBox([-0.5,1.2*mmax,4.5,xmin]);
 board.fullUpdate();
 
 
-p1.push(board.create('point',[0,x1[0]],{strokeColor:col,fillColor:col,name:'[NH<sub>3]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
+p1.push(board.create('point',[0,x1[0]],{strokeColor:col,fillColor:col,name:'[NH<sub>3</sub>]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
 p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3.5,x1[1]],{visible:false})); 
-p1.push(board.create('point',[4,x1[1]],{strokeColor:col,fillColor:col,name:'[NH<sub>3]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
+p1.push(board.create('point',[4,x1[1]],{strokeColor:col,fillColor:col,name:'[NH<sub>3</sub>]]', label:{color:'green',autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 p2.push(board.create('point',[0,x2[0]],{strokeColor:col,fillColor:col,name:'[B]', label:{color:'blue',autoPosition: true, offset:[10, 10]},fixed:true})); 
 p2.push(board.create('point',[0.5,x2[1]],{visible:false})); 
