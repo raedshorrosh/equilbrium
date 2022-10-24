@@ -92,13 +92,13 @@ p4.push(board.create('point',[4,x4[1]],{strokeColor:col,fillColor:col,name:'{#Lb
 
 
 var c = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
-               {strokecolor:'green', strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
 var c2 = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
-               {strokecolor:'blue', strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
 var c3 = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
-               {strokecolor:'orange', strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
 var c4 = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
-               {strokecolor:'magenta', strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
 
 board.fullUpdate(); 
 
