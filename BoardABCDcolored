@@ -67,7 +67,6 @@ crvcol.sort(function(a, b){return 0.5 - Math.random()});
 board.setBoundingBox([-0.5,1.2*mmax,4.5,xmin]);
 board.fullUpdate();
 
-crvcol[]
 p1.push(board.create('point',[0,x1[0]],{strokeColor:col,fillColor:col,name:'{#LblA#}', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
 p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3,x1[1]],{visible:false})); 
