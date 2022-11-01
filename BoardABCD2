@@ -55,7 +55,7 @@ board.highlightInfobox = function(x, y , el) {
 };
 
 var p1 = [], p2=[],p3=[],p4=[],p5=[],col = 'red'; 
-var x1={#x1#},x2={#x2#},x3={#x3#},x4={#x4#};
+var x1={#x1#},x2={#x2#},x3={#x3#},x4={#x4#},x5={#x5#};
 
 var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1]);
 var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1]);
@@ -102,8 +102,8 @@ var c3 = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
                {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
 var c4 = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
                {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
-var c5=board.create('curve', [[4,4],[{#x5[1]#},{#x5[2]#}]], 
-               {strokecolor:crvcol[{#x5[0]#}], strokeOpacity:0.6, strokeWidth:2}); 
+var c5=board.create('curve', [[4,4],[x5[1],x5[2]]], 
+               {strokecolor:crvcol[x5[0]], strokeOpacity:0.6, strokeWidth:2}); 
 board.fullUpdate(); 
 
  [[/jsxgraph]]
