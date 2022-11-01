@@ -105,7 +105,8 @@ var c4 = board.create('curve', JXG.Math.Numerics.bspline(p4,4),
 var curves=[c,c2,c3,c4];
 
 var c5=board.create('curve', [[4,4],[x5[1],x5[2]]], 
-               {strokecolor:curves[x5[0]-1].strokecolor, strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
+	       console.log(curves[x5[0]-1].strokecolor);
 board.fullUpdate(); 
 
  [[/jsxgraph]]
