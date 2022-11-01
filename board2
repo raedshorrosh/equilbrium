@@ -1,0 +1,106 @@
+[[jsxgraph width="800px" height="800px"]]
+JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
+JXG.Options.text.fontSize = 16;
+JXG.Options.axis.highlight = false;
+
+var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
+    x: {
+      name: 'זמן',
+      withLabel: true,
+      label: {
+        	position: 'rt',
+		fontSize: 18,
+          	offset: [-10, -15]
+             },
+      ticks: {
+        label: {
+          visible: false,
+          anchorX: 'middle',
+          anchorY: 'top',
+          fontSize: 14,
+          offset: [0, -3]
+        },
+        drawZero: false,
+        visible: 'inherit'
+      }
+    },
+    y: {
+      name: 'ריכוז מולרי',
+      withLabel: true,
+label: {
+	position: 'rt',
+	fontSize: 18,
+        rotate:90,
+        offset: [-40, -100],
+        display: 'internal',
+      },
+      ticks: {
+        label: {
+          visible:true,
+          anchorX: 'right',
+          anchorY: 'middle',
+          fontSize: 18,
+          offset: [-6, 0]
+        },
+        tickEndings: [1, 0],
+        drawZero: false,
+        visible: true   
+      }
+    }
+  } });
+
+
+board.highlightInfobox = function(x, y , el) {
+		this.infobox.setText('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+y + 'M' );
+};
+
+var p1 = [], p2=[],p3=[],p4=[],col = 'red'; 
+var x1={#x1#},x2={#x2#},x3={#x3#},x4={#x4#};
+var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1]);
+var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1]);
+var xmin=-0.1*mmax;
+var crvcol=['green','blue','orange','magenta'];
+//randomize colors
+crvcol.sort(function(a, b){return 0.5 - Math.random()}); 
+
+board.setBoundingBox([-0.5,1.2*mmax,4.5,xmin]);
+board.fullUpdate();
+
+p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
+p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
+p1.push(board.create('point',[3,x1[1]],{visible:false})); 
+p1.push(board.create('point',[3.5,x1[1]],{visible:false})); 
+p1.push(board.create('point',[4,x1[1]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
+
+p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
+p2.push(board.create('point',[0.5,x2[1]],{visible:false})); 
+p2.push(board.create('point',[3,x2[1]],{visible:false})); 
+p2.push(board.create('point',[3.5,x2[1]],{visible:false})); 
+p2.push(board.create('point',[4,x2[1]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
+
+p3.push(board.create('point',[0,x3[0]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
+p3.push(board.create('point',[0.5,x3[1]],{visible:false})); 
+p3.push(board.create('point',[3,x3[1]],{visible:false})); 
+p3.push(board.create('point',[3.5,x3[1]],{visible:false})); 
+p3.push(board.create('point',[4,x3[1]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
+
+p4.push(board.create('point',[0,x4[0]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
+p4.push(board.create('point',[0.5,x4[1]],{visible:false})); 
+p4.push(board.create('point',[3,x4[1]],{visible:false})); 
+p4.push(board.create('point',[3.5,x4[1]],{visible:false})); 
+p4.push(board.create('point',[4,x4[1]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
+							
+
+
+var c = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
+               {strokecolor:crvcol[0], strokeOpacity:0.6, strokeWidth:2}); 
+var c2 = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
+               {strokecolor:crvcol[1], strokeOpacity:0.6, strokeWidth:2}); 
+var c3 = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
+               {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
+var c4 = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
+               {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
+
+board.fullUpdate(); 
+
+ [[/jsxgraph]]
