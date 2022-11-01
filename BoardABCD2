@@ -106,7 +106,7 @@ var curves=[c,c2,c3,c4];
 
 var c5=board.create('curve', [[4,4],[x5[1],x5[2]]], 
                {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
-	       console.log(curves[x5[0]-1].strokecolor);
+	       console.log(x5[0],curves[x5[0]-1]);
 board.fullUpdate(); 
 
  [[/jsxgraph]]
