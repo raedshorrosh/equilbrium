@@ -103,7 +103,7 @@ c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
 c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
                {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
 
- c[5]=board.create('curve', [[4,4],[x5[1],x5[2]]], 
+ c[4]=board.create('curve', [ [4,4],[ x5[1],x5[2] ] ], 
                {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
 	       console.log(x5[0]]);
 board.fullUpdate(); 
