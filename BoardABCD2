@@ -93,20 +93,19 @@ p4.push(board.create('point',[3,x4[1]],{visible:false}));
 p4.push(board.create('point',[3.5,x4[1]],{visible:false})); 
 p4.push(board.create('point',[4,x4[1]],{infoboxDigits:3,strokeColor:col,fillColor:col,name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
 
-
-var c = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
+var c=[];
+c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
                {strokecolor:crvcol[0], strokeOpacity:0.6, strokeWidth:2}); 
-var c2 = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
-               {strokecolor:crvcol[1], strokeOpacity:0.6, strokeWidth:2}); 
-var c3 = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
-               {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
-var c4 = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
+c[1] = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
+             {strokecolor:crvcol[1], strokeOpacity:0.6, strokeWidth:2}); 
+c[3] = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
+              {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
+c[4] = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
                {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
-var curves=[c,c2,c3,c4];
 
-var c5=board.create('curve', [[4,4],[x5[1],x5[2]]], 
+ c[5]=board.create('curve', [[4,4],[x5[1],x5[2]]], 
                {strokecolor:'black', strokeOpacity:0.6, strokeWidth:2}); 
-	       console.log(x5[0],curves[x5[0]-1]);
+	       console.log(x5[0]]);
 board.fullUpdate(); 
 
  [[/jsxgraph]]
