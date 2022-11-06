@@ -30,7 +30,7 @@ function manageBlur(e) {
     let el = document.getElementById('partC');
     el.classList.remove('blur-effect');
     el = document.getElementById('KC');
-    el2.style.display = 'block';
+    el.style.display = 'block';
   }
 
 }
