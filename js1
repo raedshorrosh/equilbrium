@@ -17,8 +17,8 @@ function manageBlur(e) {
   ) {
     let el = document.getElementById('partB');
     el.classList.remove('blur-effect');
-    let el = document.getElementById('ballance');
-    el.style.display = 'block';
+    let el2 = document.getElementById('ballance');
+    el2.style.display = 'block';
   }
  if (
     (document.getElementsByClassName('partB1').length > 0) &
@@ -29,8 +29,8 @@ function manageBlur(e) {
   ) {
     let el = document.getElementById('partC');
     el.classList.remove('blur-effect');
-    let el = document.getElementById('KC');
-    el.style.display = 'block';
+    let el2 = document.getElementById('KC');
+    el2.style.display = 'block';
   }
 
 }
