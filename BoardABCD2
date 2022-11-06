@@ -71,27 +71,27 @@ p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:crvcol[0],fi
 p1.push(board.create('point',[0.5,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3,x1[1]],{visible:false})); 
 p1.push(board.create('point',[3.5,x1[1]],{visible:false})); 
-p1.push(board.create('point',[4,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:col,name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
+p1.push(board.create('point',[4,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 
-p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:col,name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
+p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[0],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
 p2.push(board.create('point',[0.5,x2[1]],{visible:false})); 
 p2.push(board.create('point',[3,x2[1]],{visible:false})); 
 p2.push(board.create('point',[3.5,x2[1]],{visible:false})); 
-p2.push(board.create('point',[4,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:col,name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
+p2.push(board.create('point',[4,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[0],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
-p3.push(board.create('point',[0,x3[0]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:col,name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
+p3.push(board.create('point',[0,x3[0]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[0],name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
 p3.push(board.create('point',[0.5,x3[1]],{visible:false})); 
 p3.push(board.create('point',[3,x3[1]],{visible:false})); 
 p3.push(board.create('point',[3.5,x3[1]],{visible:false})); 
-p3.push(board.create('point',[4,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:col,name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
+p3.push(board.create('point',[4,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[0],name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10,10]},fixed:true})); 
 
 
-p4.push(board.create('point',[0,x4[0]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:col,name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
+p4.push(board.create('point',[0,x4[0]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:crvcol[0],name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
 p4.push(board.create('point',[0.5,x4[1]],{visible:false})); 
 p4.push(board.create('point',[3,x4[1]],{visible:false})); 
 p4.push(board.create('point',[3.5,x4[1]],{visible:false})); 
-p4.push(board.create('point',[4,x4[1]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:col,name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
+p4.push(board.create('point',[4,x4[1]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:crvcol[0],name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10,10]},fixed:true})); 
 
 var c=[];
 c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
