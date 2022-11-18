@@ -29,7 +29,14 @@ function managesectios(e) {
     el = document.getElementById('KC');
     el.style.display = 'block';
   }
-
+if (
+    (document.getElementsByClassName('partD1').length > 0) &
+    (document.getElementsByClassName('partD2').length > 0) 
+   
+  ) {
+    el = document.getElementById('disturbance');
+    el.style.display = 'block';
+  }
 }
 document.addEventListener('DOMContentLoaded', managesectios);
 
