@@ -37,6 +37,17 @@ if (
     el = document.getElementById('disturbance');
     el.style.display = 'block';
   }
+  
+  if (
+    (document.getElementsByClassName('partF1').length > 0) &
+    (document.getElementsByClassName('partF2').length > 0) &
+    (document.getElementsByClassName('partF3').length > 0)
+   
+  ) {
+    el = document.getElementById('final');
+    el.style.display = 'block';
+  }
+  
 }
 document.addEventListener('DOMContentLoaded', managesectios);
 
