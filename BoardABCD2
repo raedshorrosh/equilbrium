@@ -64,7 +64,7 @@ var crvcol=['green','blue','orange','magenta'];
 //randomize colors
 crvcol.sort(function(a, b){return 0.5 - Math.random()}); 
 
-board.setBoundingBox([-0.5,1.2*mmax,6.5,xmin]);
+board.setBoundingBox([-0.5,1.2*mmax,5.5,xmin]);
 board.fullUpdate();
 
 p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
