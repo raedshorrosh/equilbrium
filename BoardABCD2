@@ -5,7 +5,7 @@ JXG.Options.axis.highlight = false;
 
 var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:false,showNavigation:false,axis:true, pan: {enabled:true},defaultAxes: {
     x: {
-      name: 'זמן',
+      name: '(דקות)זמן',
       withLabel: true,
       label: {
         	position: 'rt',
@@ -25,7 +25,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       }
     },
     y: {
-      name: 'ריכוז מולרי',
+      name: '(M) ריכוז מולרי',
       withLabel: true,
 label: {
 	position: 'rt',
