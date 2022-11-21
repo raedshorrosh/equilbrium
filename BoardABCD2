@@ -17,7 +17,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
           visible: true,
           anchorX: 'middle',
           anchorY: 'top',
-          fontSize: 14,
+          fontSize: 18,
           offset: [0, -3]
         },
         drawZero: false,
