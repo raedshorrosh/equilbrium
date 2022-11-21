@@ -10,7 +10,7 @@ var board = JXG.JSXGraph.initBoard(divid, { showInfobox: true,showCopyright:fals
       label: {
         	position: 'rt',
 		fontSize: 18,
-          	offset: [-10, -15]
+          	offset: [-30, -15]
              },
       ticks: {
         label: {
