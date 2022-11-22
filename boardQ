@@ -110,11 +110,11 @@ board.on('move',function(){
 
 var c=[];
 c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
-               {strokecolor:crvcol[0], strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:function(){if (fixed==1) {return 'black'} else {return crvcol[0]}}, strokeOpacity:0.6, strokeWidth:2}); 
 c[1] = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
-             {strokecolor:crvcol[1], strokeOpacity:0.6, strokeWidth:2}); 
+             {strokecolor:function(){if (fixed==2) {return 'black'} else {return crvcol[1]}}, strokeOpacity:0.6, strokeWidth:2}); 
 c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
-              {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
+              {strokecolor:function(){if (fixed==3) {return 'black'} else {return crvcol[2]}}, strokeOpacity:0.6, strokeWidth:2}); 
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
 var markA='',markB='',markC='';
