@@ -117,9 +117,9 @@ c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
 var markA='*',markB='**',markC='***';
-var nameTA=board.create('text',[5,p1[0].Y(),function(){return markA}]), 
-    nameTB=board.create('text',[5,p2[0].Y(),function(){return markB}]),
-    nameTC=board.create('text',[5,p3[0].Y(),function(){return markC}]);
+var nameTA=board.create('text',[5,function(){return p1[0].Y()},function(){return markA}]), 
+    nameTB=board.create('text',[5,function(){return p2[0].Y()},function(){return markB}]),
+    nameTC=board.create('text',[5,function(){return p3[0].Y()},function(){return markC}]);
 
 board.fullUpdate(); 
 stack_jxg.bind_point(ansAref,p1[0]);
