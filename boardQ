@@ -133,31 +133,33 @@ p1[0].setPosition(JXG.COORDS_BY_USER,[4.1,p1[0].Y()]);board.update(); p1[0].setP
 p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p2[0].setPosition(JXG.COORDS_BY_USER,[4,p2[0].Y()]);board.update();
 p3[0].setPosition(JXG.COORDS_BY_USER,[4.1,p3[0].Y()]);board.update(); p3[0].setPosition(JXG.COORDS_BY_USER,[4,p3[0].Y()]);board.update();
 
+var correct='<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>',
+    incorrect='<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>'
 checkAnswer = function(indx, mrk) {
   switch (indx) {
     case 1:
       if (mrk == 1) {
-        markA = '<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
+        markA = correct;
       } else {
-        markA = '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>' ;
+        markA = incorrect ;
       }
       answered=true;
       board.update();
       break;
     case 2:
       if (mrk == 1) {
-        markB = '<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
+        markB = correct;
       } else {
-       markB= '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
+       markB= incorrect;
       }
       answered=true;
       board.update();
       break;
     case 3:
     if (mrk==1) {
-      markC='<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
+      markC=correct;
     } else {
-      markC='<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
+      markC=incorrect;
 
     }
     answered=true;
