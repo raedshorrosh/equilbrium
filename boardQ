@@ -136,25 +136,25 @@ checkAnswer = function(indx, mrk) {
   switch (indx) {
     case 1:
       if (mrk == 1) {
-        markA = '<i class="fa fa-check"></i>';
+        markA = '<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
       } else {
-        markA = '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>' ;
+        markA = '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>' ;
       }
 board.update();
       break;
     case 2:
       if (mrk == 1) {
-        markB = '<i class="fa fa-check"></i>';
+        markB = '<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
       } else {
-       markB= '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>';
+       markB= '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
       }
 board.update();
       break;
     case 3:
     if (mrk==1) {
-      markC='<i class="fa fa-check"></i>';
+      markC='<span style="font-size: 2.0em; color:green;"><i class="fa fa-check"></i></span>';
     } else {
-      markC='<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>';
+      markC='<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
 
     }
     board.update();
