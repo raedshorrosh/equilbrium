@@ -122,8 +122,16 @@ stack_jxg.bind_point(ansBref,p2[0]);
 stack_jxg.bind_point(ansCref,p3[0]);
 
 board.fullUpdate();
-p1[0].moveTo[4,p1[0].Y()+0.00001];
-p2[0].moveTo[4,p2[0].Y()+0.00001];
-p2[0].moveTo[4,p2[0].Y()+0.00001];
+
+P1[0].setPosition( JXG.COORDS_BY_USER,xy1);
+board.update(); 
+P1[0].setPosition( JXG.COORDS_BY_USER,xy);
 board.update();
+
+
+p1[0].setPosition(JXG.COORDS_BY_USER,[4.1,p1[0].Y()]);board.update(); p1[0].setPosition(JXG.COORDS_BY_USER,[4,p1[0].Y()]);board.update();
+p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p1[0].setPosition(JXG.COORDS_BY_USER,[4,p2[0].Y()]);board.update();
+p3[0].setPosition(JXG.COORDS_BY_USER,[4.1,p3[0].Y()]);board.update(); p1[0].setPosition(JXG.COORDS_BY_USER,[4,p3[0].Y()]);board.update();
+
+
  [[/jsxgraph]]
