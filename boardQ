@@ -71,7 +71,7 @@ crvcol.sort(function(a, b){return 0.5 - Math.random()});
 board.setBoundingBox([-0.5,1.2*mmax,5.5,xmin]);
 board.fullUpdate();
 var markA='',markB='',markC='';
-var nameA:'[{#LblA#}]', nameB:'[{#LblB#}]', nameC:'[{#LblC#}]';
+var nameA='[{#LblA#}]', nameB='[{#LblB#}]', nameC='[{#LblC#}]';
 if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
 else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
 else {x1[1]=x1[0]; x2[1]=x2[0]};
