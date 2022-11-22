@@ -122,4 +122,8 @@ stack_jxg.bind_point(ansBref,p2[0]);
 stack_jxg.bind_point(ansCref,p3[0]);
 
 board.fullUpdate();
+p1[0].moveTo[4,p1[0].Y()+0.00001];
+p2[0].moveTo[4,p2[0].Y()+0.00001];
+p2[0].moveTo[4,p2[0].Y()+0.00001];
+board.update();
  [[/jsxgraph]]
