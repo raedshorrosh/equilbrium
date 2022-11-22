@@ -1,4 +1,4 @@
-[[jsxgraph width="800px" height="800px"]]
+[[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansAref' input-ref-ansC='ansAref' width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
@@ -117,5 +117,9 @@ c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
 board.fullUpdate(); 
+stack_jxg.bind_point(ansAref,p1[0]);
+stack_jxg.bind_point(ansBref,p2[0]);
+stack_jxg.bind_point(ansCref,p3[0]);
 
+board.fullUpdate();
  [[/jsxgraph]]
