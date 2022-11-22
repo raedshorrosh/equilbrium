@@ -59,9 +59,7 @@ var x1={#x1#},x2={#x2#},x3={#x3#},fixed={#fixed#};
 
 //var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
 //var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
-if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
-else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
-else {x1[1]=x1[0]; x2[1]=x2[0]};
+
 var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1]);
 var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1]);
 
@@ -72,6 +70,10 @@ crvcol.sort(function(a, b){return 0.5 - Math.random()});
 
 board.setBoundingBox([-0.5,1.2*mmax,5.5,xmin]);
 board.fullUpdate();
+
+if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
+else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
+else {x1[1]=x1[0]; x2[1]=x2[0]};
 
 p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==1}})); 
 p1.push(board.create('point',[3.5,function(){return p1[0].Y()}],{visible:false}));
