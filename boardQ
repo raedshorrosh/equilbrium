@@ -56,6 +56,7 @@ board.highlightInfobox = function(x, y , el) {
 
 var p1 = [], p2=[],p3=[],p4=[],p5=[],col = 'red'; 
 var x1={#x1#},x2={#x2#},x3={#x3#},fixed={#fixed#};
+var answered=false;
 
 //var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
 //var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
@@ -75,20 +76,20 @@ if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
 else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
 else {x1[1]=x1[0]; x2[1]=x2[0]};
 
-p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==1}})); 
+p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==1)||(answered)}})); 
 p1.push(board.create('point',[3.5,function(){return p1[0].Y()}],{visible:false}));
 p1.push(board.create('point',[3,function(){return p1[0].Y()}],{visible:false})); 
 p1.push(board.create('point',[0.5,function(){return p1[0].Y()}],{visible:false})); 
 p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 
-p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==2}})); 
+p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==2)||(answered)}})); 
 p2.push(board.create('point',[3.5,function(){return p2[0].Y()}],{visible:false}));
 p2.push(board.create('point',[3,function(){return p2[0].Y()}],{visible:false})); 
 p2.push(board.create('point',[0.5,function(){return p2[0].Y()}],{visible:false})); 
 p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
-p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==3}})); 
+p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==3)||(answered)}})); 
 p3.push(board.create('point',[3.5,function(){return p3[0].Y()}],{visible:false}));
 p3.push(board.create('point',[3,function(){return p3[0].Y()}],{visible:false})); 
 p3.push(board.create('point',[0.5,function(){return p3[0].Y()}],{visible:false})); 
@@ -116,7 +117,7 @@ c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
               {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
-var markA='*',markB='**',markC='***';
+var markA='',markB='',markC='';
 var nameTA=board.create('text',[4.5,function(){return p1[0].Y()},function(){return markA}]), 
     nameTB=board.create('text',[4.5,function(){return p2[0].Y()},function(){return markB}]),
     nameTC=board.create('text',[4.5,function(){return p3[0].Y()},function(){return markC}]);
@@ -140,7 +141,8 @@ checkAnswer = function(indx, mrk) {
       } else {
         markA = '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>' ;
       }
-board.update();
+      answered=true;
+      board.update();
       break;
     case 2:
       if (mrk == 1) {
@@ -148,7 +150,8 @@ board.update();
       } else {
        markB= '<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
       }
-board.update();
+      answered=true;
+      board.update();
       break;
     case 3:
     if (mrk==1) {
@@ -157,6 +160,7 @@ board.update();
       markC='<span style="font-size: 2.0em; color:red;"><i class="fa fa-times"></i> </span>';
 
     }
+    answered=true;
     board.update();
 }
 };
