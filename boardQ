@@ -70,10 +70,7 @@ crvcol.sort(function(a, b){return 0.5 - Math.random()});
 
 board.setBoundingBox([-0.5,1.2*mmax,5.5,xmin]);
 board.fullUpdate();
-var markA='*',markB='**',markC='***';
-var nameTA=board.create('text',[5,p1[0].Y(),function(){return markA}]), 
-    nameTB=board.create('text',[5,p2[0].Y(),function(){return markB}]),
-    nameTC=board.create('text',[5,p3[0].Y(),function(){return markC}]);
+
 if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
 else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
 else {x1[1]=x1[0]; x2[1]=x2[0]};
@@ -119,6 +116,11 @@ c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4),
               {strokecolor:crvcol[2], strokeOpacity:0.6, strokeWidth:2}); 
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
+var markA='*',markB='**',markC='***';
+var nameTA=board.create('text',[5,p1[0].Y(),function(){return markA}]), 
+    nameTB=board.create('text',[5,p2[0].Y(),function(){return markB}]),
+    nameTC=board.create('text',[5,p3[0].Y(),function(){return markC}]);
+
 board.fullUpdate(); 
 stack_jxg.bind_point(ansAref,p1[0]);
 stack_jxg.bind_point(ansBref,p2[0]);
