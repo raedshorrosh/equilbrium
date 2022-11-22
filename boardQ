@@ -1,3 +1,7 @@
+<script type="text/javascript">
+ var checkAnswer;
+</script>
+
 [[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref' input-ref-ansC='ansCref' width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
@@ -70,25 +74,25 @@ crvcol.sort(function(a, b){return 0.5 - Math.random()});
 
 board.setBoundingBox([-0.5,1.2*mmax,5.5,xmin]);
 board.fullUpdate();
-
+var markA='',markB='',markC='';
 if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
 else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
 else {x1[1]=x1[0]; x2[1]=x2[0]};
 
-p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==1}})); 
+p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]'+function(){return markA}, label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==1}})); 
 p1.push(board.create('point',[3.5,function(){return p1[0].Y()}],{visible:false}));
 p1.push(board.create('point',[3,function(){return p1[0].Y()}],{visible:false})); 
 p1.push(board.create('point',[0.5,function(){return p1[0].Y()}],{visible:false})); 
 p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 
-p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==2}})); 
+p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]'+function(){return markB}, label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==2}})); 
 p2.push(board.create('point',[3.5,function(){return p2[0].Y()}],{visible:false}));
 p2.push(board.create('point',[3,function(){return p2[0].Y()}],{visible:false})); 
 p2.push(board.create('point',[0.5,function(){return p2[0].Y()}],{visible:false})); 
 p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
-p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]', label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==3}})); 
+p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]'+function(){return markC}, label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:function(){return fixed==3}})); 
 p3.push(board.create('point',[3.5,function(){return p3[0].Y()}],{visible:false}));
 p3.push(board.create('point',[3,function(){return p3[0].Y()}],{visible:false})); 
 p3.push(board.create('point',[0.5,function(){return p3[0].Y()}],{visible:false})); 
@@ -127,5 +131,31 @@ p1[0].setPosition(JXG.COORDS_BY_USER,[4.1,p1[0].Y()]);board.update(); p1[0].setP
 p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p2[0].setPosition(JXG.COORDS_BY_USER,[4,p2[0].Y()]);board.update();
 p3[0].setPosition(JXG.COORDS_BY_USER,[4.1,p3[0].Y()]);board.update(); p3[0].setPosition(JXG.COORDS_BY_USER,[4,p3[0].Y()]);board.update();
 
+checkAnswer = function(indx, mrk) {
+  switch (indx) {
+    case 1:
+      if (mrk == 1) {
+        markA = '<i class="fa fa-check"></i>';
+      } else {
+        markA = '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>' ;
+      }
+board.update();
+      break;
+    case 2:
+      if (mrk == 1) {
+        markB = '<i class="fa fa-check"></i>';
+      } else {
+       markB= '<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>';
+      }
+board.update();
+      break;
+    case 3:
+    if (mrk==1) {
+      markC='<i class="fa fa-check"></i>';
+    } else {
+      markC='<span style="font-size: 1.0em; color:red;"><i class="fa fa-times"></i> </span>';
 
- [[/jsxgraph]]
+    }
+    board.update();
+}
+};
