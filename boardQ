@@ -76,7 +76,7 @@ if (fixed==1) {x2[1]=x2[0]; x3[1]=x3[0]}
 else if (fixed==2) {x1[1]=x1[0]; x3[1]=x3[0]}
 else {x1[1]=x1[0]; x2[1]=x2[0]};
 
-p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:3,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', 
+p1.push(board.create('point',[4.0,x1[1]],{infoboxDigits:4,strokeColor:crvcol[0],fillColor:crvcol[0],name:'[{#LblA#}]', 
      label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==1)||(answered)}})); 
 p1.push(board.create('point',[3.5,function(){return p1[0].Y()}],{visible:false}));
 p1.push(board.create('point',[3,function(){return p1[0].Y()}],{visible:false})); 
@@ -85,7 +85,7 @@ p1.push(board.create('point',[0,x1[0]],{infoboxDigits:3,strokeColor:crvcol[0],fi
       label:{color:crvcol[0],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
 
-p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', 
+p2.push(board.create('point',[4.0,x2[1]],{infoboxDigits:4,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', 
          label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==2)||(answered)}})); 
 p2.push(board.create('point',[3.5,function(){return p2[0].Y()}],{visible:false}));
 p2.push(board.create('point',[3,function(){return p2[0].Y()}],{visible:false})); 
@@ -93,7 +93,7 @@ p2.push(board.create('point',[0.5,function(){return p2[0].Y()}],{visible:false})
 p2.push(board.create('point',[0,x2[0]],{infoboxDigits:3,strokeColor:crvcol[1],fillColor:crvcol[1],name:'[{#LblB#}]', 
          label:{color:crvcol[1],autoPosition: true, offset:[10, 10]},fixed:true})); 
 
-p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]',
+p3.push(board.create('point',[4.0,x3[1]],{infoboxDigits:4,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]',
  label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:function(){return (fixed==3)||(answered)}})); 
 p3.push(board.create('point',[3.5,function(){return p3[0].Y()}],{visible:false}));
 p3.push(board.create('point',[3,function(){return p3[0].Y()}],{visible:false})); 
@@ -101,7 +101,7 @@ p3.push(board.create('point',[0.5,function(){return p3[0].Y()}],{visible:false})
 p3.push(board.create('point',[0,x3[0]],{infoboxDigits:3,strokeColor:crvcol[2],fillColor:crvcol[2],name:'[{#LblC#}]',
  label:{color:crvcol[2],autoPosition: true, offset:[10, 10]},fixed:true})); 
 /*
-p4.push(board.create('point',[4.0,x4[1]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:crvcol[3],name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10, 10]},fixed:false})); 
+p4.push(board.create('point',[4.0,x4[1]],{infoboxDigits:4,strokeColor:crvcol[3],fillColor:crvcol[3],name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10, 10]},fixed:false})); 
 p4.push(board.create('point',[3.5,function(){return p4[0].Y()}],{visible:false}));
 p4.push(board.create('point',[3,function(){return p4[0].Y()}],{visible:false})); 
 p4.push(board.create('point',[0.5,function(){return p4[0].Y()}],{visible:false})); 
