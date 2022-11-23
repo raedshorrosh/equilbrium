@@ -102,6 +102,7 @@ p4.push(board.create('point',[0.5,function(){return p4[0].Y()}],{visible:false})
 p4.push(board.create('point',[0,x3[0]],{infoboxDigits:3,strokeColor:crvcol[3],fillColor:crvcol[3],name:'[{#LblD#}]', label:{color:crvcol[3],autoPosition: true, offset:[10, 10]},fixed:true})); 
 */
 board.on('move',function(){ 
+			  started=true;
                           p1[0].moveTo([4,p1[0].Y()]);
 			  p2[0].moveTo([4,p2[0].Y()]);
 			  p3[0].moveTo([4,p3[0].Y()]);
