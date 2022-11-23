@@ -130,8 +130,8 @@ c[1] = board.create('curve', JXG.Math.Numerics.bspline(p2,4),
              {strokecolor:function(){if (fixed==2) {return 'black'} else {return crvcol[1]}}, strokeOpacity:0.6, strokeWidth:2}); 
 c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
               {strokecolor:function(){if (fixed==3) {return 'black'} else {return crvcol[2]}}, strokeOpacity:0.6, strokeWidth:2}); 
-c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
-              {strokecolor:function(){if (fixed==4) {return 'black'} else {return crvcol[3]}}, strokeOpacity:0.6, strokeWidth:2}); 
+//c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4), 
+ //             {strokecolor:function(){if (fixed==4) {return 'black'} else {return crvcol[3]}}, strokeOpacity:0.6, strokeWidth:2}); 
               
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
