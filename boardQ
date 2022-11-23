@@ -56,7 +56,7 @@ board.highlightInfobox = function(x, y , el) {
 
 var p1 = [], p2=[],p3=[],p4=[],p5=[],col = 'red'; 
 var x1={#x1#},x2={#x2#},x3={#x3#},fixed={#fixed#};
-var answered=false;
+var answered=false, started=false;
 
 //var mmin=Math.min(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
 //var mmax=Math.max(x1[0],x1[1],x2[0],x2[1],x3[0],x3[1],x4[0],x4[1],x5[2]);
@@ -110,11 +110,11 @@ board.on('move',function(){
 
 var c=[];
 c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
-               {strokecolor:function(){if (fixed==1) {return 'black'} else {return crvcol[0]}}, strokeOpacity:0.6, strokeWidth:2}); 
+               {strokecolor:function(){if (fixed==1) {return 'black'} else {return crvcol[0]}}, strokeOpacity:0.6, strokeWidth:2, visible:function(){return started||(fixed==1)}}); 
 c[1] = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
-             {strokecolor:function(){if (fixed==2) {return 'black'} else {return crvcol[1]}}, strokeOpacity:0.6, strokeWidth:2}); 
+             {strokecolor:function(){if (fixed==2) {return 'black'} else {return crvcol[1]}}, strokeOpacity:0.6, strokeWidth:2,visible:function(){return started||(fixed==2)}}); 
 c[2] = board.create('curve', JXG.Math.Numerics.bspline(p3,4), 
-              {strokecolor:function(){if (fixed==3) {return 'black'} else {return crvcol[2]}}, strokeOpacity:0.6, strokeWidth:2}); 
+              {strokecolor:function(){if (fixed==3) {return 'black'} else {return crvcol[2]}}, strokeOpacity:0.6, strokeWidth:2,visible:function(){return started||(fixed==3)}}); 
 //c[3] = board.create('curve', JXG.Math.Numerics.bspline(p4,4),  {strokecolor:crvcol[3], strokeOpacity:0.6, strokeWidth:2}); 
  
 var markA='',markB='',markC='';
