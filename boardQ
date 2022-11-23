@@ -107,7 +107,7 @@ board.on('move',function(){
 			  p3[0].moveTo([4,p3[0].Y()]);
       //p4[0].moveTo([4,p4[0].Y()]);
 													});
-board.on('mousedown',function(){started=true});
+board.on('up',function(){started=true});
 
 var c=[];
 c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4), 
