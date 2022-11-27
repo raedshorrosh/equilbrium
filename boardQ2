@@ -107,7 +107,7 @@ c[0] = board.create('curve', JXG.Math.Numerics.bspline(p1,4),
 c[1] = board.create('curve', JXG.Math.Numerics.bspline(p2,4), 
              {strokecolor:function(){if (fixed==2) {return 'black'} else {return crvcol[1]}}, strokeOpacity:0.6, strokeWidth:2}); 
  
-var markA=''
+var markA='',markB='';
 var nameTA=board.create('text',[4.5,function(){return p1[0].Y()},function(){return markA}]); 
    
 board.fullUpdate(); 
