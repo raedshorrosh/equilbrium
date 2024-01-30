@@ -1,4 +1,6 @@
-
+<script type="text/javascript">
+ var checkAnswer;
+</script>
 
 [[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref'  width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
