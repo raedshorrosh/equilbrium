@@ -2,7 +2,7 @@
  var checkAnswer;
 </script>
 
-[[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref' input-ref-ansC='ansCref' width="800px" height="800px"]]
+[[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref'  width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
