@@ -1,6 +1,6 @@
 
 
-[[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref'  input-ref-answers='checTheAnswers' width="800px" height="800px"]]
+[[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref'  input-ref-answers='flagsid' width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
@@ -121,8 +121,16 @@ p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p2[0].setP
 
 var correct='<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span>',
     incorrect='<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i> </span>'
-var checkAnswer = function(indx, mrk) {
-  switch (indx) {
+
+/* Store flags in a dict matching the JSON dict in the input.*/
+let flags = [];
+let flagserialiser = () => JSON.stringify(flags);
+let flagdeserialiser = (val) => {
+ flags = JSON.parse(val);
+/* Then the logic to check if flags are up. */
+	let indx=flags[0];
+	let mrk=flags[1];
+ switch (indx) {
     case 1:
       if (mrk == 1) {
         markA = correct;
@@ -141,5 +149,11 @@ var checkAnswer = function(indx, mrk) {
       answered=true;
       board.update();
   }
-};
+}	
+/* Then we bind that to the input. The last parameter is empty as nothing on the graph side triggers this. */
+stack_jxg.custom_bind(flagsid, flagserialiser, flagdeserialiser, []);
+
+
+
+
 [[/jsxgraph]]
