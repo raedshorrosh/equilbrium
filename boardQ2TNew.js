@@ -1,5 +1,3 @@
-
-
 [[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref'  input-ref-answers='flagsid' width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
@@ -119,17 +117,23 @@ board.fullUpdate();
 p1[0].setPosition(JXG.COORDS_BY_USER,[4.1,p1[0].Y()]);board.update(); p1[0].setPosition(JXG.COORDS_BY_USER,[4,p1[0].Y()]);board.update();
 p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p2[0].setPosition(JXG.COORDS_BY_USER,[4,p2[0].Y()]);board.update();
 
-var correct='<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span>',
-    incorrect='<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i> </span>'
+var correct='<span  style="font-size: 30px; color:green;">✔</span>',
+    incorrect='<span  style="font-size: 1.5em; ">❌ </span>'
 
 /* Store flags in a dict matching the JSON dict in the input.*/
-let flags = [];
-let flagserialiser = () => JSON.stringify(flags);
-let flagdeserialiser = (val) => {
+let flags = {};
+
+document.getElementById(flagsid).addEventListener('change' ,flagdeserialiser);
+
+function flagdeserialiser() {
+if  ( ! (answered)) try{
+let val=document.getElementById(flagsid).value;
+console.log(val);
  flags = JSON.parse(val);
+console.log('flags is ',flags);
 /* Then the logic to check if flags are up. */
-	let indx=flags[0];
-	let mrk=flags[1];
+	let indx=flags.indx;
+	let mrk=flags.mrk;
  switch (indx) {
     case 1:
       if (mrk == 1) {
@@ -139,6 +143,7 @@ let flagdeserialiser = (val) => {
       }
       answered=true;
       board.update();
+console.log ('markA is ', markA);
       break;
     case 2:
       if (mrk == 1) {
@@ -148,12 +153,14 @@ let flagdeserialiser = (val) => {
       }
       answered=true;
       board.update();
+console.log ('markB is ',markB);
+}
+
   }
+	catch(err) { }
 }	
-/* Then we bind that to the input. The last parameter is empty as nothing on the graph side triggers this. */
-stack_jxg.custom_bind(flagsid, flagserialiser, flagdeserialiser, []);
 
 
 
-
+ 
 [[/jsxgraph]]
