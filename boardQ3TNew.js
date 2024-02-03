@@ -141,10 +141,10 @@ var correct='<span  style="font-size: 30px; color:green;">✔</span>',
 let flags = {};
 
 document.getElementById(flagsid).addEventListener('change' ,flagdeserialiser);
-let ans1=0,ans2=0,ans3=0;
+let ans=0;
 
 function flagdeserialiser() {
-answered=((ans1+ans2+ans3)==2);
+answered=(ans==2);
 if  ( ! (answered)) try{
 let val=document.getElementById(flagsid).value;
 console.log(val);
@@ -161,7 +161,7 @@ console.log('flags is ',flags);
         markA = incorrect ;
       }
       board.update();
-      ans1=1;
+      ans++;
 console.log ('markA is ', markA);
       break;
     case 2:
@@ -171,7 +171,7 @@ console.log ('markA is ', markA);
        markB= incorrect;
       }
       board.update();
-ans2=2;
+ans++;
 console.log ('markB is ',markB);
   break;
     case 3:
@@ -181,7 +181,7 @@ console.log ('markB is ',markB);
       markC=incorrect;
 
     }
-ans3=3;
+ans++;
     board.update();
 
 }
