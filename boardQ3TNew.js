@@ -1,4 +1,4 @@
-      [[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref' input-ref-ansC='ansCref' input-ref-answers='flagsid' width="800px" height="800px"]]
+  [[jsxgraph input-ref-ansA='ansAref' input-ref-ansB='ansBref' input-ref-ansC='ansCref' input-ref-answers='flagsid' width="800px" height="800px"]]
 JXG.Options.text.cssDefaultStyle += ';direction:ltr;'
 JXG.Options.text.fontSize = 16;
 JXG.Options.axis.highlight = false;
@@ -139,12 +139,12 @@ var correct='<span  style="font-size: 30px; color:green;">✔</span>',
 
 /* Store flags in a dict matching the JSON dict in the input.*/
 let flags = {};
-
-document.getElementById(flagsid).addEventListener('change' ,flagdeserialiser);
 let ans=0;
 
+
+document.getElementById(flagsid).addEventListener('change' ,flagdeserialiser);
+
 function flagdeserialiser() {
-answered=(ans==2);
 if  ( ! (answered)) try{
 let val=document.getElementById(flagsid).value;
 console.log(val);
@@ -162,6 +162,9 @@ console.log('flags is ',flags);
       }
       board.update();
       ans++;
+
+answered=(ans==2);
+
 console.log ('markA is ', markA);
       break;
     case 2:
@@ -172,6 +175,7 @@ console.log ('markA is ', markA);
       }
       board.update();
 ans++;
+answered=(ans==2);
 console.log ('markB is ',markB);
   break;
     case 3:
@@ -182,6 +186,7 @@ console.log ('markB is ',markB);
 
     }
 ans++;
+answered=(ans==2);
     board.update();
 
 }
