@@ -127,7 +127,6 @@ function managesectios(e) {
     
     el = document.getElementById('ballance');
     el.style.display = 'block';
-console.log(el);
   }
  if (
     (document.getElementsByClassName('partB1').length > 0) &
