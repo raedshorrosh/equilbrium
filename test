@@ -117,18 +117,18 @@ board.fullUpdate();
 <script>
 function managesections(e) {
   if (
-  isPostive(document.getElementsByClassName('partB1').length) &
-  isPostive(document.getElementsByClassName('partA2').length) &
-  isPostive(document.getElementsByClassName('partA3').length) &
-  isPostive(document.getElementsByClassName('partA4').length ) &
-  isPostive(document.getElementsByClassName('partA5').length) &
-  isPostive(document.getElementsByClassName('partA6').length) &
-  isPostive(document.getElementsByClassName('partA7').length) &
-  isPostive(document.getElementsByClassName('partA8').length) &
-  isPostive(document.getElementsByClassName('partA9').length) &
-  isPostive(document.getElementsByClassName('partA10').length) &
-  isPostive(document.getElementsByClassName('partA11').length) &
-  isPostive(document.getElementsByClassName('partA12').length)
+  (document.getElementsByClassName('partA1').length > 0) &
+  (document.getElementsByClassName('partA2').length > 0) &
+  (document.getElementsByClassName('partA3').length > 0) &
+  (document.getElementsByClassName('partA4').length > 0) &
+  (document.getElementsByClassName('partA5').length > 0) &
+  (document.getElementsByClassName('partA6').length > 0) &
+  (document.getElementsByClassName('partA7').length > 0) &
+  (document.getElementsByClassName('partA8').length > 0) &
+  (document.getElementsByClassName('partA9').length > 0) &
+  (document.getElementsByClassName('partA10').length > 0) &
+  (document.getElementsByClassName('partA11').length > 0) &
+  (document.getElementsByClassName('partA12').length > 0)
   ) {
     
     el = document.getElementById('ballance');
