@@ -111,7 +111,7 @@ board.fullUpdate();
 <script>
 function managesections(e) {
   if (
-   (document.getElementsByClassName('partA1').length > 0) &
+   (document.getElementsByClassName('partB1').length > 0) &
    (document.getElementsByClassName('partA2').length > 0) &
    (document.getElementsByClassName('partA3').length > 0) &
    (document.getElementsByClassName('partA4').length > 0) &
