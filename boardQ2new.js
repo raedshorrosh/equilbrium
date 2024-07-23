@@ -147,7 +147,7 @@ if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
 if  (!answered ) 
 {
-mrk=JSON.parse(content);
+var mrk=JSON.parse(content);
 checkAnswer(mrk[0],mrk[1]);
 }}});
 [[/jsxgraph]]
