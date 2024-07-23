@@ -141,4 +141,13 @@ var checkAnswer = function(indx, mrk) {
       board.update();
   }
 };
+
+stack_js.get_content({#rqm#}).then((content) => {
+if (content !== null) {
+// As the content is not null this means the span is present so feedback is displayed and we can react to it here
+if  (!answered ) 
+{
+mrk=JSON.parse(content);
+checkAnswer(mrk[0],mrk[1]);
+}}});
 [[/jsxgraph]]
