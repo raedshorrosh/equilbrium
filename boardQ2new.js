@@ -117,8 +117,8 @@ board.fullUpdate();
 p1[0].setPosition(JXG.COORDS_BY_USER,[4.1,p1[0].Y()]);board.update(); p1[0].setPosition(JXG.COORDS_BY_USER,[4,p1[0].Y()]);board.update();
 p2[0].setPosition(JXG.COORDS_BY_USER,[4.1,p2[0].Y()]);board.update(); p2[0].setPosition(JXG.COORDS_BY_USER,[4,p2[0].Y()]);board.update();
 
-var correct='<span style="font-size: 1.5em; color:green;"><i class="fa fa-check"></i></span>',
-    incorrect='<span style="font-size: 1.5em; color:red;"><i class="fa fa-times"></i> </span>'
+var correct='<span style="font-size: 1.5em; color:green;">✔</span>',
+    incorrect='<span style="font-size: 1.5em; color:red;">❌ </span>'
 
 var checkAnswer = function(indx, mrk) {
   switch (indx) {
@@ -147,7 +147,8 @@ if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
 if  (!answered ) 
 {
-var mrk=JSON.parse(content);
-checkAnswer(mrk[0],mrk[1]);
+var M=JSON.parse(content);
+console.log(M);	
+checkAnswer(M[0],M[1]);
 }}});
 [[/jsxgraph]]
