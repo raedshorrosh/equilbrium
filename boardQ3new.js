@@ -179,16 +179,20 @@ if  (!answered )
 console.log('content A is',content);		
 var M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
+	
 stack_js.get_content("{#rqm#}b").then((content) => {
+if (content !== null) {	
 console.log('content B is',content);	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-});
+}});
+
 stack_js.get_content("{#rqm#}c").then((content) => {
+if (content !== null) {		
 console.log('content C is',content);	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-});
+}});
 
 
 }}});
