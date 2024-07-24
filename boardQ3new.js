@@ -181,11 +181,11 @@ checkAnswer(M[0],M[1]);
 stack_js.get_content({#rqm#}+b).then((content) => {
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-]);
+});
 stack_js.get_content({#rqm#}+c).then((content) => {
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-]);
+});
 
 
 }}});
