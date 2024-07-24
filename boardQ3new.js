@@ -176,7 +176,7 @@ if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
 if  (!answeredA ) 
 {
-console.log('content A is',content);		
+answeredA=true;	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
 }}});
@@ -185,16 +185,16 @@ stack_js.get_content("{#rqm#}b").then((content) => {
 if (content !== null) {	
 if  (!answeredB ) 
 {	
-console.log('content B is',content);	
-M=JSON.parse(content);
-checkAnswer(M[0],M[1]);
+  answeredB=true;	
+  M=JSON.parse(content);
+  checkAnswer(M[0],M[1]);
 }}});
 
 stack_js.get_content("{#rqm#}c").then((content) => {
 if (content !== null) {		
 if  (!answeredC ) 
-{	
-console.log('content C is',content);	
+{
+answeredC=true;	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
 }}});
