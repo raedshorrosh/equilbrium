@@ -169,7 +169,7 @@ var checkAnswer = function(indx, mrk) {
     board.update();
 }
 };
-var answeredA=false,answeredB=false,answeredC=false;
+var answeredA=false,answeredB=false,answeredC=false,M=[];
 stack_js.get_content("{#rqm#}a").then((content) => {
 console.log('content is',content);	
 if (content !== null) {
@@ -177,7 +177,7 @@ if (content !== null) {
 if  (!answeredA ) 
 {
 console.log('content A is',content);		
-var M=JSON.parse(content);
+M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
 }}});
 
