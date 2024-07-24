@@ -171,12 +171,13 @@ var checkAnswer = function(indx, mrk) {
 };
 
 stack_js.get_content("{#rqm#}a").then((content) => {
+console.log('content is',content);	
 if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
 if  (!answered ) 
 {
+console.log('content is',content);		
 var M=JSON.parse(content);
-console.log(M);	
 checkAnswer(M[0],M[1]);
 stack_js.get_content("{#rqm#}b").then((content) => {
 M=JSON.parse(content);
