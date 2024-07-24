@@ -169,31 +169,36 @@ var checkAnswer = function(indx, mrk) {
     board.update();
 }
 };
-
+var answeredA=false,answeredB=false,answeredC=false;
 stack_js.get_content("{#rqm#}a").then((content) => {
 console.log('content is',content);	
 if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
-if  (!answered ) 
+if  (!answeredA ) 
 {
 console.log('content A is',content);		
 var M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-	
+}}});
+
 stack_js.get_content("{#rqm#}b").then((content) => {
 if (content !== null) {	
+if  (!answeredB ) 
+{	
 console.log('content B is',content);	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-}});
+}}});
 
 stack_js.get_content("{#rqm#}c").then((content) => {
 if (content !== null) {		
+if  (!answeredC ) 
+{	
 console.log('content C is',content);	
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
-}});
-
-
 }}});
+
+
+
 [[/jsxgraph]]
