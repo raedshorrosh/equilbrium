@@ -170,7 +170,7 @@ var checkAnswer = function(indx, mrk) {
 }
 };
 
-stack_js.get_content({#rqm#}+a).then((content) => {
+stack_js.get_content("{#rqm#}"+"a").then((content) => {
 if (content !== null) {
 // As the content is not null this means the span is present so feedback is displayed and we can react to it here
 if  (!answered ) 
@@ -178,11 +178,11 @@ if  (!answered )
 var M=JSON.parse(content);
 console.log(M);	
 checkAnswer(M[0],M[1]);
-stack_js.get_content({#rqm#}+b).then((content) => {
+stack_js.get_content("{#rqm#}"+"b").then((content) => {
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
 });
-stack_js.get_content({#rqm#}+c).then((content) => {
+stack_js.get_content("{#rqm#}"+"c").then((content) => {
 M=JSON.parse(content);
 checkAnswer(M[0],M[1]);
 });
