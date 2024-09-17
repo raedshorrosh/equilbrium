@@ -51,7 +51,7 @@ label: {
 
 
 board.highlightInfobox = function(x, y , el) {
-		this.infobox.setText('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+y + 'M' );
+		this.infobox.setText('<span style="color:black;font-weight:bold">'+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+y + 'M' +'</span>');
 };
 
 var p1 = [], p2=[],p3=[],p4=[],p5=[],col = 'red'; 
